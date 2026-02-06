@@ -38,4 +38,5 @@ export interface Personalization {
   disabledTabs?: string[];
   gradesSortMethod?: string;
   gradesPeriodId?: string;
+  photoMode?: boolean;
 }
