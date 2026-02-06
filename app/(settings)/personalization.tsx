@@ -20,6 +20,7 @@ import { router } from "expo-router";
 import { useHeaderHeight } from "@react-navigation/elements";
 import { Dynamic } from "@/ui/components/Dynamic";
 import { FadeIn, FadeOut } from "react-native-reanimated";
+import { Alert, Platform, ScrollView, Switch } from "react-native";
 
 
 const PersonalizationSettings = () => {
@@ -202,6 +203,28 @@ const PersonalizationSettings = () => {
           </Item>
         </List>
         <List>
+          <Item>
+  <Icon size={30}>
+    <Papicons name={"Camera"} opacity={0.7} />
+  </Icon>
+
+  <Typography variant="title">
+    mode photo
+  </Typography>
+
+  <Typography variant="caption" color="secondary">
+    flouter les noms des enseignants
+  </Typography>
+
+  <Trailing>
+    <Switch
+      value={!!settingsStore.photoMode}
+      onValueChange={(v) =>
+        mutateProperty("personalization", { photoMode: v })
+      }
+    />
+  </Trailing>
+</Item>
           <Item
             onPress={() => {
               router.push("/(settings)/tabs");
