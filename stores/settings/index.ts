@@ -15,6 +15,7 @@ const defaultPersonalization: Personalization = {
   showAlertAtLogin: false,
   showDevMode: false,
   magicModelURL: MAGIC_URL,
+  photoMode: false,
 };
 
 export const useSettingsStore = create<SettingsStorage>()(
